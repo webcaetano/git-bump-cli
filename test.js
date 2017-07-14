@@ -49,6 +49,8 @@ test.cb('should patch the repo',function(t){
 		git:function(callback){
 			git(tmpFolder)
 			.init()
+			.addConfig('user.name', 'Lulu')
+	        .addConfig('user.email', 'lulu@support.com')
 			.add('.')
 			.commit("first commit!")
 			.raw(['ls-tree','-r','master','--name-only'],function(err,data,c){
@@ -87,6 +89,8 @@ test.cb('should minor version the repo',function(t){
 		git:function(callback){
 			git(tmpFolder)
 			.init()
+			.addConfig('user.name', 'Lulu')
+	        .addConfig('user.email', 'lulu@support.com')
 			.add('.')
 			.commit("first commit!")
 			.raw(['ls-tree','-r','master','--name-only'],function(err,data,c){
@@ -125,6 +129,8 @@ test.cb('should major version the repo',function(t){
 		git:function(callback){
 			git(tmpFolder)
 			.init()
+			.addConfig('user.name', 'Lulu')
+	        .addConfig('user.email', 'lulu@support.com')
 			.add('.')
 			.commit("first commit!")
 			.raw(['ls-tree','-r','master','--name-only'],function(err,data,c){
@@ -163,6 +169,8 @@ test.cb('should patch the repo without type argument',function(t){
 		git:function(callback){
 			git(tmpFolder)
 			.init()
+			.addConfig('user.name', 'Lulu')
+	        .addConfig('user.email', 'lulu@support.com')
 			.add('.')
 			.commit("first commit!")
 			.raw(['ls-tree','-r','master','--name-only'],function(err,data,c){
