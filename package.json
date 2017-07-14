@@ -9,7 +9,8 @@
     "bump": "cli.js"
   },
   "scripts": {
-    "start": "nodemon test.js --watch index.js --watch test.js --exec 'ava'"
+    "start": "nodemon test.js --watch index.js --watch test.js --exec 'ava'",
+    "test": "ava"
   },
   "dependencies": {
     "async": "^2.1.2",
