@@ -38,7 +38,7 @@ var self = function(type,options,done){
 		},
 		bump:['files',function(results,callback){
 			// console.log('bump')
-			var {files} = results;
+			var files = results.files;
 			var run = [];
 
 
@@ -61,7 +61,7 @@ var self = function(type,options,done){
 		}],
 		version:['bump',function(results,callback){
 			// console.log('version')
-			var {files} = results;
+			var files = results.files;
 
 			fs.readFile(files[0],function(err,file){
 				var content = JSON.parse(String(file));
@@ -70,7 +70,8 @@ var self = function(type,options,done){
 		}],
 		gitTag:['version',function(results,callback){
 			// console.log('gitTag')
-			var {version,files} = results;
+			var files = results.files;
+			var version = results.version;
 			var pipe = git(options.dest);
 
 			_.each(files,function(file){
