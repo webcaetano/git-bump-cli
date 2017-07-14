@@ -9,7 +9,7 @@ const writeJsonFile = require('write-json-file');
 
 // insert defaults here
 
-var self = function(type='patch',options,done){
+var self = function(type,options,done){
 	if(typeof options === 'function'){
 		done = options;
 	}
