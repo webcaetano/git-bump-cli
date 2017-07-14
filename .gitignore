@@ -1,0 +1,10 @@
+node_modules/
+bower_components/
+.sass-cache/
+.tmp/
+dist/
+npm-debug.log
+test/dist/
+
+package-lock.json
+*.log
