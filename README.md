@@ -1,8 +1,8 @@
 # git-bump-cli
 
 [![NPM version][npm-image]][npm-url]
-<!-- [![Build status][travis-image]][travis-url] -->
-<!-- [![Test coverage][coveralls-image]][coveralls-url] -->
+[![Build status][travis-image]][travis-url]
+[![Test coverage][coveralls-image]][coveralls-url]
 
 > Bump package.json version and git tags it
 
@@ -45,6 +45,6 @@ MIT
 
 [npm-image]: https://img.shields.io/npm/v/git-bump-cli.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/git-bump-cli
-<!-- [travis-image]: https://img.shields.io/travis/webcaetano/git-bump-cli.svg?style=flat-square
+[travis-image]: https://img.shields.io/travis/webcaetano/git-bump-cli.svg?style=flat-square
 [travis-url]: https://travis-ci.org/webcaetano/git-bump-cli
- -->
+
