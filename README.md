@@ -2,7 +2,6 @@
 
 [![NPM version][npm-image]][npm-url]
 [![Build status][travis-image]][travis-url]
-[![Test coverage][coveralls-image]][coveralls-url]
 
 > Bump package.json version and git tags it
 
