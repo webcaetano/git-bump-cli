@@ -1,6 +1,6 @@
 {
   "name": "git-bump-cli",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "description": "CLI for update package.json version and git tag it",
   "main": "index.js",
   "author": "Andre Caetano",
@@ -21,7 +21,10 @@
     "write-json-file": "^2.2.0"
   },
   "devDependencies": {
-    "ava": "^0.18.2"
+    "ava": "^0.18.2",
+    "data-creatures": "^1.0.1",
+    "mkdirp": "^0.5.1",
+    "tempfile": "^2.0.0"
   },
   "keywords": [
     "cli-app",
