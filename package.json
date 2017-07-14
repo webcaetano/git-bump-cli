@@ -1,6 +1,6 @@
 {
   "name": "git-bump-cli",
-  "version": "1.0.36",
+  "version": "1.0.37",
   "description": "CLI for update package.json version and git tag it",
   "main": "index.js",
   "author": "Andre Caetano",
