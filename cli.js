@@ -6,29 +6,25 @@ var self = require('./');
 
 var cli = meow([
 	'Usage',
-		'$ dhalf <src>',
-	'',
-	'Options',
-		'--type odd or even <default : odd>',
-	'',
-	'Examples',
-		'dhalf "**/*.png"',
-		'dhalf "**/*.png" --type even',
+		'$ bump <type>',
+		'$ bump patch // 1.0.1',
+		'$ bump minor // 1.1.0',
+		'$ bump major // 2.0.0',
 ], {
 	string: ['_']
 });
 
 
 var defaults = {
-	type:'odd'
 }
 
 var options = _.extend({},defaults,{
-	type: cli.flags.type,
 })
 
 options = _.omitBy(options,_.isUndefined);
 
-var glob = _.nth(cli.input,0);
+var type = _.nth(cli.input,0);
 
-self(glob,options);
+console.log(type)
+
+self(type,options);

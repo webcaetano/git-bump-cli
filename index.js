@@ -24,7 +24,7 @@ var self = function(type='patch',options,done){
 		done = options;
 	}
 
-	if(!type || !semver.inc('0.0.1')) type = 'patch';
+	if(!type || !semver.inc('0.0.1',type)) type = 'patch';
 
 	options = _.extend({},defaults,options);
 
@@ -42,7 +42,7 @@ var self = function(type='patch',options,done){
 					fs.readFile(filePath,function(err,file){
 						var content = JSON.parse(String(file));
 						content.version = semver.inc(content.version,type);
-						console.log(filePath,content)
+						// console.log(filePath,content)
 						writeJsonFile(filePath,content,{
 							indent:2
 						}).then(err =>{
@@ -70,7 +70,7 @@ var self = function(type='patch',options,done){
 				pipe.add(file)
 			})
 
-			console.log(version,options.message+' '+version)
+			console.log(version,type)
 
 			pipe.commit(options.message+' '+version)
 			.addTag(version)
@@ -79,18 +79,12 @@ var self = function(type='patch',options,done){
 			})
 		}]
 	},function(err,results){
-		console.log(err,results)
-
 		if(err){
 			console.log(err);
 			return;
 		}
 
-		// writeJsonFile.sync(path.join(process.env.PWD,'package.json'),pkg,{
-		//   indent:2,
-		// })
-
-		// done(null,results);
+		if(done) done(results);
 	})
 }
 
