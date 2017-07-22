@@ -17,6 +17,7 @@ var self = function(type,options,done){
 	var defaults = {
 		files:['bower.json','package.json'],
 		dest:process.env.PWD,
+		push:false,
 		message:'new version'
 	}
 
@@ -29,6 +30,8 @@ var self = function(type,options,done){
 	}
 
 	options = _.extend({},defaults,options);
+
+	console.log(options)
 
 	async.auto({
 		files:function(callback){
@@ -85,6 +88,17 @@ var self = function(type,options,done){
 			.exec(function(err){
 				callback(err);
 			})
+		}],
+		push:['gitTag',function(results,callback){
+			if(!options.push){
+				callback(null);
+				return;
+			}
+
+			console.log('push')
+			git(options.dest)
+			.raw(['push','origin','HEAD','--tags'])
+			.exec(callback);
 		}]
 	},function(err,results){
 		if(err){

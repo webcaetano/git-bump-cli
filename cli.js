@@ -16,9 +16,11 @@ var cli = meow([
 
 
 var defaults = {
+	push:false
 }
 
 var options = _.extend({},defaults,{
+	push:cli.flags.push,
 })
 
 options = _.omitBy(options,_.isUndefined);
