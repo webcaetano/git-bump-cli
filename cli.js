@@ -27,6 +27,4 @@ options = _.omitBy(options,_.isUndefined);
 
 var type = _.nth(cli.input,0);
 
-console.log(type)
-
 self(type,options);

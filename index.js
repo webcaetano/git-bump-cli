@@ -31,8 +31,6 @@ var self = function(type,options,done){
 
 	options = _.extend({},defaults,options);
 
-	console.log(options)
-
 	async.auto({
 		files:function(callback){
 			// console.log('files')
@@ -95,7 +93,6 @@ var self = function(type,options,done){
 				return;
 			}
 
-			console.log('push')
 			git(options.dest)
 			.raw(['push','origin','HEAD','--tags'])
 			.exec(callback);
