@@ -17,7 +17,7 @@ var self = function(type,options,done){
 	var defaults = {
 		files:['bower.json','package.json'],
 		dest:process.env.PWD,
-		push:false,
+		push:true,
 		message:'new version'
 	}
 
