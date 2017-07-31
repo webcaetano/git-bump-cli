@@ -61,7 +61,7 @@ test.cb('should patch the repo',function(t){
 			.exec(callback);
 		},
 		patch:['git',function(results,callback){
-			self(type,{dest:tmpFolder},callback);
+			self(type,{dest:tmpFolder,push:false},callback);
 		}],
 		gitLog:['patch',function(results,callback){
 			git(tmpFolder)
@@ -101,7 +101,7 @@ test.cb('should minor version the repo',function(t){
 			.exec(callback);
 		},
 		patch:['git',function(results,callback){
-			self(type,{dest:tmpFolder},callback);
+			self(type,{dest:tmpFolder,push:false},callback);
 		}],
 		gitLog:['patch',function(results,callback){
 			git(tmpFolder)
@@ -141,7 +141,7 @@ test.cb('should major version the repo',function(t){
 			.exec(callback);
 		},
 		patch:['git',function(results,callback){
-			self(type,{dest:tmpFolder},callback);
+			self(type,{dest:tmpFolder,push:false},callback);
 		}],
 		gitLog:['patch',function(results,callback){
 			git(tmpFolder)
@@ -181,7 +181,7 @@ test.cb('should patch the repo without type argument',function(t){
 			.exec(callback);
 		},
 		patch:['git',function(results,callback){
-			self(undefined,{dest:tmpFolder},callback);
+			self(undefined,{dest:tmpFolder,push:false},callback);
 		}],
 		gitLog:['patch',function(results,callback){
 			git(tmpFolder)
