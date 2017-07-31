@@ -16,7 +16,7 @@ var cli = meow([
 
 
 var defaults = {
-	push:false
+	push:true
 }
 
 var options = _.extend({},defaults,{
